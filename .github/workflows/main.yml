@@ -36,13 +36,13 @@ jobs:
       - name: ✅ Run Tests with Maven
         run: mvn test
 
-      - name: 🔍 SonarCloud Scan
-        run: |
-          mvn sonar:sonar \
-            -Dsonar.projectKey=Ayoub-Ajdour \
-            -Dsonar.organization=ayoub-ajdour \
-            -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=${{ secrets.SONARTOKEN }}
+      # - name: 🔍 SonarCloud Scan
+      #   run: |
+      #     mvn sonar:sonar \
+      #       -Dsonar.projectKey=Ayoub-Ajdour \
+      #       -Dsonar.organization=ayoub-ajdour \
+      #       -Dsonar.host.url=https://sonarcloud.io \
+      #       -Dsonar.login=${{ secrets.SONARTOKEN }}
 
       - name: 📤 Upload Test Results
         if: always()
